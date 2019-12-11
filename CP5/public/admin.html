@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <title>Contest Admin</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-transparent navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Today's News</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="homepage.html">ARTICLE CONTEST</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+  </nav>
+  <br><br>
+  <div id="admin" class="content">
+
+    <h1 class=large>All Participant Entries</h1>
+
+
+
+    <div class="form">
+      <div v-for="item in items">
+        <div class=outline>
+
+          <h2 class=entryT> {{item.title}}</h2>
+          <img :src="item.path" style="width:500px" class="center" />
+          <br>
+          <h2 class=entry>{{item.description}} </h2>
+          <button class="button" @click="deleteItem(item)">DELETE</button>
+
+
+          <button class="button" type="checkbox" style="float-left;" @click="cartItem(item);submitPurchase();">MARK AS FAVORITE</button>
+        </div>
+        <br>
+      </div>
+      <br>
+    </div>
+    <h1 class=large>Favorites</h1>
+    <ul v-if="submitted">
+      <div v-for="item in purchasedItems">
+        <div class=outline>
+          <h2 class=entryT>{{item.title}}<br>
+            <img :src="item.path" style="width:150px" /></h2>
+            <h2 class=entry>Contestant: {{item.name}} <br>  Email: {{item.email}} </h2>
+        </div> 
+      </div>
+    </ul>
+
+  </div>
+
+
+  <br><br><br><br><br> <br><br><br><br><br>
+  <div class="footer">
+    <a href="index.html" style="color:white;">Home</a>
+    <p><a href="https://github.com/BYUCS260/midterm-2-mbisel.git" style="color:white;">GitHub</a></p>
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="/admin.js"></script>
+</body>
+
+</html>

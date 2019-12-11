@@ -1,0 +1,80 @@
+h1,
+h2,
+.navbar-brand,
+.navbar-nav a {
+  font-weight: 600;
+  color: #E37C22;
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: #EDF7F9;
+  
+}
+.container {
+  padding: 20px 0
+
+}
+.card-divider{
+    background-color: #405065;
+    color: white;
+}
+
+.column:last-child:not(:first-child),
+.columns:last-child:not(:first-child) {
+  float: left;
+}
+
+.main_heading {
+  margin: 10px 0 30px;
+}
+
+.callout {
+  margin-bottom: 40px;
+}
+
+select {
+  text-transform: capitalize;
+}
+
+.loader {
+  text-align: center;
+  padding: 40px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.bg {
+  /* The image used */
+  background-image: url("images/Newsbanner.jpg");
+
+  /* Full height */
+  height: 75%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body{
+   background-color:#EDF7F9;
+}
+.centered {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #E37C22;
+  font-family: helvetica;
+  font-weight: 500;
+  font-size: 75;
+  text-align: center;
+  
+}
+.footer {
+   position: absolute;
+   left: 0;
+   width: 100%;
+   background-color: #E37C22;
+   color: white;
+   text-align: center;
+}
